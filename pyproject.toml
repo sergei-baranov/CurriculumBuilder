@@ -1,0 +1,22 @@
+[project]
+name = "curriculum-builder"
+version = "0.1.0"
+description = "Curriculum Builder (CrewAI): исследование темы и траектория самообучения в Markdown"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "crewai==0.203.2",
+    "crewai-tools==0.76.0",
+    "python-dotenv>=1.0.0",
+    "python-slugify>=8.0",
+]
+
+[project.scripts]
+curriculum-builder = "curriculum_builder.main:main"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
